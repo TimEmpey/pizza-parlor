@@ -10,6 +10,18 @@
     size: large<br>
     toppings: pepperoni<br>
 
+  Test 2: Should take multiple inputs for toppings and place into an array
+  Code:
+  let pizza = new Pizza("Tim", "large", ["pepperoni", "pineapple"]);<br>
+  pizza;<br>
+  Expected Output:
+  pizza{
+    firstName: Tim
+    size: large
+    toppings: array = ["pepperoni", "pineapple"]
+  }
+
+
   Describe Order()<br>
   Test 1: Should create an new blank order<br>
   Code:<br>
