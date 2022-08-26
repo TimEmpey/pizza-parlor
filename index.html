@@ -10,58 +10,56 @@
   <p>est. 2022</p>
   <h2>The Classics</h2>
   <p>*All Classics Are Larges*</p>
-  <form>
-      <label for="classic1">
-        <input type="radio" id="classic1" name="classic" value="meatLover">
-        Meat Lovers
-      </label><br>
-      <label for="classic2">
-        <input type="radio" id="classic2" name="classic" value="hawaiianStyle">
-        Hawaiian Style
-      </label><br>
-      <label for="classic3">
-        <input type="radio" id="classic3" name="classic" value="combo">
-        Combo
-      </label><br>
-      <label for="classic4">
-        <input type="radio" id="classic4" name="classic" value="margarita">
-        Margarita
-      </label><br>
-      <button type="submit" id="classicOrder">Order</button>
-  </form>
   <h2>Build Your Pizza!</h2>
   <p>*All Pizzas Come With Cheese*</p>
-  <form id="buildPizza"> 
+  <form id="build-pizza"> 
+    <label for="first-name">Enter Your First Name:</label>
+    <input type="text" id="first-name-input" name="first-name-input">
     <label>
-      <input type="checkbox" id="size1" name="size1" value="small">
-      Small
-    </label><br>
+    <p>Size</p>
+    <select name="size" id="size-select">
+      <option value="">--Please Pick a Size--</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select><br>
+    <p>Toppings</p>
     <label>
-      <input type="checkbox" id="size2" name="size2" value="medium">
-      Medium
-    </label><br>
-    <label>
-      <input type="checkbox" id="size3" name="size3" value="large">
-      Large
-    </label><br>
-    <label>
-      <input type="checkbox" id="topping1" name="topping1" value="pepperoni">
+      <input type="checkbox" id="topping1" name="topping" value="pepperoni">
       Pepperoni
     </label><br>
     <label>
-      <input type="checkbox" id="topping2" name="topping2" value="pineapple">
+      <input type="checkbox" id="topping2" name="topping" value="pineapple">
       Pineapple
     </label><br>
     <label>
-      <input type="checkbox" id="topping3" name="topping3" value="spinach">
+      <input type="checkbox" id="topping3" name="topping" value="spinach">
       Spinach
     </label><br>
-    
     <label>
-      <input type="checkbox" id="topping4" name="topping4" value="mushrooms">
+      <input type="checkbox" id="topping4" name="topping" value="mushrooms">
     Mushrooms
     </label><br>
     <button type="submit" id="buildOrder">Order</button>
+  </form>
+  <form>
+    <label for="classic1">
+      <input type="radio" id="classic1" name="classic" value="meatLover">
+      Meat Lovers
+    </label><br>
+    <label for="classic2">
+      <input type="radio" id="classic2" name="classic" value="hawaiianStyle">
+      Hawaiian Style
+    </label><br>
+    <label for="classic3">
+      <input type="radio" id="classic3" name="classic" value="combo">
+      Combo
+    </label><br>
+    <label for="classic4">
+      <input type="radio" id="classic4" name="classic" value="margarita">
+      Margarita
+    </label><br>
+    <button type="submit" id="classicOrder">Order</button>
   </form>
   <h3>Your Order</h3>
   <p>Name: <span class="first-name"></span></p>
