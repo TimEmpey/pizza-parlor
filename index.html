@@ -8,22 +8,65 @@
 <body>
   <h1>Tony's Pizza Parlor</h1>
   <p>est. 2022</p>
-  <h2>Build Your Own Pizza!</h2>
-  <form> 
-    <input type="checkbox" id="size1" name="size1" value="">
-      <label for="topping1"></label>
-    <input type="checkbox" id="size2" name="size2" value="">
-      <label for="topping2"></label>
-    <input type="checkbox" id="size3" name="size3" value="">
-      <label for="topping3"></label>
-    <input type="checkbox" id="topping1" name="topping1" value="">
-      <label for="topping1"></label>
-      <input type="checkbox" id="topping2" name="topping2" value="">
-    <label for="topping2"></label>
-      <input type="checkbox" id="topping3" name="topping3" value="">
-    <label for="topping3"></label>
-    <input type="checkbox" id="topping4" name="topping4" value="">
-      <label for="topping4"></label>
+  <h2>The Classics</h2>
+  <p>*All Classics Are Larges*</p>
+  <form>
+      <label for="classic1">
+        <input type="radio" id="classic1" name="classic" value="meatLover">
+        Meat Lovers
+      </label><br>
+      <label for="classic2">
+        <input type="radio" id="classic2" name="classic" value="hawaiianStyle">
+        Hawaiian Style
+      </label><br>
+      <label for="classic3">
+        <input type="radio" id="classic3" name="classic" value="combo">
+        Combo
+      </label><br>
+      <label for="classic4">
+        <input type="radio" id="classic4" name="classic" value="margarita">
+        Margarita
+      </label><br>
+      <button type="submit" id="classicOrder">Order</button>
   </form>
+  <h2>Build Your Pizza!</h2>
+  <p>*All Pizzas Come With Cheese*</p>
+  <form id="buildPizza"> 
+    <label>
+      <input type="checkbox" id="size1" name="size1" value="small">
+      Small
+    </label><br>
+    <label>
+      <input type="checkbox" id="size2" name="size2" value="medium">
+      Medium
+    </label><br>
+    <label>
+      <input type="checkbox" id="size3" name="size3" value="large">
+      Large
+    </label><br>
+    <label>
+      <input type="checkbox" id="topping1" name="topping1" value="pepperoni">
+      Pepperoni
+    </label><br>
+    <label>
+      <input type="checkbox" id="topping2" name="topping2" value="pineapple">
+      Pineapple
+    </label><br>
+    <label>
+      <input type="checkbox" id="topping3" name="topping3" value="spinach">
+      Spinach
+    </label><br>
+    
+    <label>
+      <input type="checkbox" id="topping4" name="topping4" value="mushrooms">
+    Mushrooms
+    </label><br>
+    <button type="submit" id="buildOrder">Order</button>
+  </form>
+  <h3>Your Order</h3>
+  <p>Name: <span class="first-name"></span></p>
+  <p>Size: <span class="pizza-size"></span></p>
+  <p>Toppings: <span class="pizza-toppings"></span></p>
+  <p>Price: <span class="total-price"></span></p>
 </body>
 </html>
