@@ -24,6 +24,15 @@ function Pizza (firstName, size, toppings = []) {
 
 let order = new Order
 
+function displayOrder(event) {
+  const firstName = document.getElementById("first-name-input").value;
+  const displayOrder = order.findPizza(firstName);
+  document.querySelector(".first-name").innerText = displayOrder.firstName + (" ");
+  document.querySelector(".pizza-size").innerText = displayOrder.size  + (" ");
+  document.querySelector(".pizza-toppings").innerText = displayOrder.toppings  + (" ");
+  document.querySelector(".total-price").innerText = displayOrder.price  + (" ");
+}
+
 function handleSubmission(event) {
   event.preventDefault();
   const firstNameInput = document.getElementById("first-name-input").value;
@@ -35,18 +44,9 @@ function handleSubmission(event) {
   }
   let newPizza = new Pizza(firstNameInput, sizeInput, toppingsInputArray);
   order.addPizza(newPizza);
-  console.log(order.findPizza('Tim'));
-}
-
-function displayOrder(event) {
-  event.preventDefault();
-  const firstNameInput = document.getElementById("first-name-input").value;
-  document.querySelector("first-name").innerText = displayOrder.firstName;
-  document.querySelector("pizza-size").innerText = displayTicket.movieSelect;
-
 }
 
 window.addEventListener("load", function() {
   this.document.querySelector("form#build-pizza").addEventListener("submit", handleSubmission)
-  // this.document.querySelector("form#build-pizza").addEventListener("submit", displayOrder)
+  this.document.querySelector("form#build-pizza").addEventListener("submit", displayOrder)
 });
