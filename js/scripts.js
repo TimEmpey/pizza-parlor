@@ -30,7 +30,7 @@ function handleSubmission(event) {
   const sizeInput = document.querySelector("select#size-select").value;
   const toppingsInputArray = []
   const toppingsInput = document.querySelectorAll('input[type=checkbox]:checked')
-  for (var i = 0; i < toppingsInput.length; i++) {
+  for (let i = 0; i < toppingsInput.length; i++) {
     toppingsInputArray.push(toppingsInput[i].value)
   }
   let newPizza = new Pizza(firstNameInput, sizeInput, toppingsInputArray);
@@ -38,6 +38,13 @@ function handleSubmission(event) {
   console.log(order.findPizza('Tim'));
 }
 
+function displayOrder(event) {
+  event.preventDefault();
+  const firstNameInput = document.getElementById("first-name-input").value;
+  document.querySelector("first-name").innerText = displayOrder.firstName;
+  document.querySelector("pizza-size").innerText = displayTicket.movieSelect;
+
+}
 
 window.addEventListener("load", function() {
   this.document.querySelector("form#build-pizza").addEventListener("submit", handleSubmission)
