@@ -15,13 +15,13 @@ Order.prototype.findPizza = function(firstName) {
 }
 
 Pizza.prototype.cost = function() {
-  if (this.size === 'large' && this.toppings.includes('pepperoni')) {
+  if (this.size === 'large' && this.toppings.includes(' pepperoni') || this.size === 'large' && this.toppings.includes(' sausage') || this.size === 'large' && this.toppings.includes(' ham')) {
     let cost =  '$18';
     return cost;
-  } else if (this.size === 'medium' && this.toppings.includes('pepperoni')) {
+  } else if (this.size === 'medium' && this.toppings.includes(' pepperoni') || this.size === 'medium' && this.toppings.includes(' sausage') || this.size === 'medium' &&this.toppings.includes(' ham')) {
     let cost = '$15';
     return cost;
-  } else if (this.size === 'medium' && this.toppings.includes('pepperoni')) {
+  } else if (this.size === 'small' && this.toppings.includes(' pepperoni') || this.toppings.includes(' sausage')  || this.toppings.includes(' ham')) {
     let cost = '$10'
     return cost;
   } else if (this.size === 'large') {
