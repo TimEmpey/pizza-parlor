@@ -23,6 +23,16 @@ input[name="next"]{
 
 .builder {
   text-align: left;
+  background-color: white;
+  padding: 20px;
+  border: solid black;
+  margin-right: 10px;
+}
+
+.payment {
+  background-color: white;
+  padding: 20px;
+  border: solid black
 }
 
 .order {
