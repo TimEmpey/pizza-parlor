@@ -14,10 +14,33 @@ Order.prototype.findPizza = function(firstName) {
   return false;
 }
 
-function Pizza (firstName, size, toppings = []) {
+Pizza.prototype.cost = function() {
+  if (this.size === 'large' && this.toppings === 'pepperoni') {
+    let cost =  '$18';
+    return cost;
+  } else if (this.size === 'medium' && this.toppings === 'pepperoni') {
+    let cost = '$15';
+    return cost;
+  } else if (this.size === 'medium' && this.toppings === 'pepperoni') {
+    let cost = '$10'
+    return cost;
+  } else if (this.size === 'large') {
+    let cost = '$15';
+    return cost;
+  } else if (this.size === 'medium') {
+    let cost = '$12';
+    return cost;
+  } else if (this.size === 'small') {
+    let cost = '$8';
+    return cost;
+  }
+};
+
+function Pizza (firstName, size, toppings = [], price) {
   this.firstName = firstName;
   this.size = size;
   this.toppings = toppings;
+  this.pizzaCost = price;
 }
 
 // UI Logic
@@ -30,7 +53,6 @@ function displayOrder(event) {
   document.querySelector(".first-name").innerText = displayOrder.firstName + (" ");
   document.querySelector(".pizza-size").innerText = displayOrder.size  + (" ");
   document.querySelector(".pizza-toppings").innerText = displayOrder.toppings  + (" ");
-  document.querySelector(".total-price").innerText = displayOrder.price  + (" ");
 }
 
 function handleSubmission(event) {
@@ -43,7 +65,9 @@ function handleSubmission(event) {
     toppingsInputArray.push(toppingsInput[i].value)
   }
   let newPizza = new Pizza(firstNameInput, sizeInput, toppingsInputArray);
+  let cost = newPizza.cost();
   order.addPizza(newPizza);
+  document.querySelector(".total-price").innerText = cost  + (" ");
 }
 
 window.addEventListener("load", function() {
