@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   background: #7b947d;
 }
@@ -7,6 +8,21 @@ body{
 input[name="next"]{
   position: absolute;
   visibility: hidden;
+}
+
+.postOrder {
+  text-align: center;
+}
+.post-order p{
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.builder {
+  text-align: left;
 }
 
 .order {

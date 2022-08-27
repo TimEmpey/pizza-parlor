@@ -54,7 +54,9 @@
   </div>
   <div class="container order">
     <div class="row">
-      <div class="col-6">
+      <div class="col-2">
+      </div>
+      <div class="col-6 builder">
         <h2>Build Your Pizza!</h2>
         <p>*All Pizzas Come With Cheese*</p>
         <form id="build-pizza"> 
@@ -108,14 +110,36 @@
           <button type="submit" id="buildOrder">Order</button>
         </form>
       </div>
-      <div class="col-6">
+      <div class="col-2 payment">
         <h3>Your Order</h3>
         <p>Name: <span class="first-name"></span></p>
         <p>Size: <span class="pizza-size"></span></p>
         <p>Toppings: <span class="pizza-toppings"></span></p>
         <p>Price: <span class="total-price"></span></p>
+        <h3>Delivery</h3>
+        <form>
+          <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+          <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+          <label for="zip">Zip:</label>
+            <input type="text" id="zip" name="zip">
+          <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"><br><br>
+          <button type="submit" id="placeOrder">Place Order</button>
+        </form>
+      </div>
+      <div class="col-2">
       </div>
     </div>
+
+<!--TODO finish place order button
+    <div class="hidden post-order" id="post-order">
+      <h1>Thanks for choosing Tony's Pizzeria</h1>
+      <p>Your order will be delivered in <span class="delivery-time"></span> minutes</p>
+      <img src="img/delivery-guy.webp" alt="delivery car">
+    </div> -->
+
   </div>
 </body>
 </html>

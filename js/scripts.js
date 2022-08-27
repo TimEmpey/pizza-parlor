@@ -72,5 +72,5 @@ function handleSubmission(event) {
 
 window.addEventListener("load", function() {
   this.document.querySelector("form#build-pizza").addEventListener("submit", handleSubmission)
-  this.document.querySelector("form#build-pizza").addEventListener("submit", displayOrder)
+  this.document.querySelector("form#build-pizza").addEventListener(getElementById("post-order"), displayOrder)
 });
