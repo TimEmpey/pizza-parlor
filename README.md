@@ -54,4 +54,15 @@
     firstName: 'Tim'<br>
     size: 'large'<br>
     toppings: 'pepperoni'<br>
+
+  Describe: Pizza.prototype.cost()<br>
+  Test: Should display cost of pizza based on selected properties for said pizza<br>
+  Code:<br>
+    let order = new Order();<br>
+    let pizza = new Pizza("Tim", "large", "pepperoni");<br>
+    order.findPizza('Tim')<br>
+    newPizza.cost()
+  Expected Output:<br>
+    $18
+
 </detail>
