@@ -2,6 +2,9 @@
 
 #### By _**Tim Empey**_
 
+## Github Pages
+_https://timempey.github.io/pizza-parlor/_
+
 #### _Pizzeria webpage with custom ordering_
 
 ## Technologies Used
